@@ -176,7 +176,7 @@ Tensor& binary_cross_entropy_backward_out_cuda(const Tensor& grad, const Tensor&
 // -----------------------------------
 namespace {
 
-constexpr int NLL_LOSS_THREADS = 32;
+constexpr int NLL_LOSS_THREADS = 64;
 
 #define AT_DISPATCH_NLL_LOSS_INDEX_TYPES(TYPE, NAME, ...)                   \
   [&] {                                                                     \
